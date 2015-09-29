@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode title="Home" controller="Home" action="Index">
+    <mvcSiteMapNode title="About" controller="Home" action="About"/>
+
+    <mvcSiteMapNode title="Bridal" controller="Products" action="Bridal">
+      <mvcSiteMapNode title="Bands" controller="Products"  action="BridalRings">
+        <mvcSiteMapNode title="Details" action="BridalRings" key="Bands" category="BridalRings" dynamicNodeProvider="MvcSiteMapProvider_MultiCategory.ProductNodeProvider, MvcSiteMapProvider_MultiCategory" />
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title="Engagement" controller="Products"  action="BridalEngagement">
+        <mvcSiteMapNode title="Details" action="BridalEngagement" key="Engagement" category="BridalEngagement" dynamicNodeProvider="MvcSiteMapProvider_MultiCategory.ProductNodeProvider, MvcSiteMapProvider_MultiCategory" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="Jewelry" controller="Products" action="Jewelry">
+      <mvcSiteMapNode title="Bands" controller="Products"  action="JewelryBands">
+        <mvcSiteMapNode title="Details" action="JewelryBands" key="Bands" category="JewelryBands" dynamicNodeProvider="MvcSiteMapProvider_MultiCategory.ProductNodeProvider, MvcSiteMapProvider_MultiCategory" />
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+  </mvcSiteMapNode>
+
+</mvcSiteMap>
